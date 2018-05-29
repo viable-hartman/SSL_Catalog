@@ -4,7 +4,7 @@ Scan IP ranges and store pertinent SSL information for later data mining.  Curre
 I have also written an MPI version of this scanner that lets you run on HPC clusters.  The MPI version greatly decreases the time it takes to catalog the internet (depending on the size of your cluster of course).  This version has the lowest barrier to entry, as you don't need a cluster set up to run it.  You do, however need a database named *cert_scanner* which can be populated via *cert_scanner.sql* as follows:
 
         echo "CREATE DATABASE cert_scanner;" | mysql -u <user> -p"<password>"
-        mysql -u <user> -p"<password>" < cert_scanner.sql
+        mysql -u <user> -p"<password>" cert_scanner < cert_scanner.sql
 
 My MPI version is a bit more flexible, but I'm still actively making changes to it.  Thus, I'll create a new repo for it as soon as I'm completely happy with it, and when I have time to document 1). The OpenHPC cluster setup.  2). How the code is distributed and run on that cluster.
 
