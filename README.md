@@ -55,3 +55,8 @@ My MPI version is a bit more flexible, but I'm still actively making changes to 
 
 * Many providers have these lists, and you can find most of them via Google Search.
 
+# Protect Your Servers Behind Cloudflare
+
+* Use this Gist to protect Linux servers behind Cloudflare [Cloudflare Ipset Gist](https://gist.github.com/viable-hartman/3093796be4ec66710f20e7bdf3576724 "Cloudflare Ipset Gist")
+
+* Schedule the above Gist to run at a regular frequency.  I run it every 6 hours.
