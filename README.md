@@ -1,4 +1,7 @@
 # SSL_Catalog
+
+[Norcon 2018 Slides](https://docs.google.com/presentation/d/1VeCfEkty2onozfXVh7C8ZlKjeTQ0sWo3GGzDfnJq8cE/edit?usp=sharing "Norcon 2018 Slides")
+
 Scan IP ranges and store pertinent SSL information for later data mining.  Currently the Expire Date, IP, Name, and Subject alternative names are stored.
 
 I have also written an MPI version of this scanner that lets you run on HPC clusters.  The MPI version greatly decreases the time it takes to catalog the internet (depending on the size of your cluster of course).  This version has the lowest barrier to entry, as you don't need a cluster set up to run it.  You do, however need a database named *cert_scanner* which can be populated via *cert_scanner.sql* as follows:
@@ -55,8 +58,20 @@ My MPI version is a bit more flexible, but I'm still actively making changes to 
 
 * Many providers have these lists, and you can find most of them via Google Search.
 
-# Protect Your Servers Behind Cloudflare
+# Protect Your Servers
+
+## Cloudflare Script
 
 * Use this Gist to protect Linux servers behind Cloudflare [Cloudflare Ipset Gist](https://gist.github.com/viable-hartman/3093796be4ec66710f20e7bdf3576724 "Cloudflare Ipset Gist")
 
 * Schedule the above Gist to run at a regular frequency.  I run it every 6 hours.
+
+* Use a similar script for other providers.
+
+## Other Suggestions
+
+* Only put validly named certs on providers like Cloudflare.  On your servers put non-identifiable certificates.
+
+* Keep you servers and certificates updated :-) ... Clearly!
+
+* Make sure you decommission VirtualHosts, etc.
